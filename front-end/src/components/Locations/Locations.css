@@ -1,0 +1,420 @@
+/* Global Settings */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --prm-clr: #2d3665;
+    --scnd-clr: #136c9d;
+}
+
+/* Container Styling */
+.locations-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.loc2-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Title Banner */
+.title-banner {
+    width: 100%;
+    padding: 40px 20px;
+    background: linear-gradient(
+        152.92deg, rgba(19, 108, 157, 0.8) 4.54%,
+        rgba(19, 108, 157, 0.9) 34.2%,
+        rgba(45, 54, 101, 0.75) 77.55%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.content {
+    text-align: center;
+    max-width: 800px;
+}
+
+.content .title {
+    color: white;
+    font-size: clamp(2rem, 5vw, 3.3rem);
+}
+
+.content .paragraph {
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.801);
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+}
+
+.divider {
+    margin: 15px 10px;
+    border-color: var(--scnd-clr);
+    opacity: 20%;
+}
+
+/* Features */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    color: white;
+}
+
+.feat-icon {
+    transition: 0.3s ease-in-out;
+}
+
+.feat-icon:hover {
+    opacity: 70%;
+}
+
+/* Telemedicine & Home Visit Sections */
+.tele h1, .home h1 {
+    color: var(--scnd-clr);
+    font-weight: 600;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    text-align: start;
+}
+
+.tele .subtitle, .home .subtitle {
+    font-size: 20px;
+    margin-top: 12px;
+}
+
+.tele .sub-paragraph, .home .sub-paragraph {
+    margin-top: 14px;
+}
+
+/* Section Icons */
+.section-icon {
+    margin-right: 20px;
+}
+
+/* Contact Icons */
+.contact-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+.contact-icons .contact-icon {
+    text-decoration: none;
+    color: var(--prm-clr);
+    transition: 0.3s ease-in-out;
+}
+
+.contact-icons a .facebook:hover {
+    color: #4267B2;
+}
+
+.contact-icons a .whatsapp:hover {
+    color: #09913d;
+}
+
+.contact-icons a .call:hover {
+    color: var(--scnd-clr);
+}
+
+/* Button Group */
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.button-group button {
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid var(--scnd-clr);
+    border-radius: 25px;
+    color: var(--scnd-clr);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+.button-group button.active {
+    background-color: var(--scnd-clr);
+    color: white;
+    border-color: transparent;
+}
+
+.button-group button:hover {
+    background-color: var(--scnd-clr);
+    color: white;
+    border-color: transparent;
+}
+
+/* ` Info */
+.location-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f3f4f6;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 60px;
+    min-height: 600px;
+}
+
+.info-note h5 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.info-note h6 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.info-note {
+    margin: 0 10px;
+}
+
+.info-note .paragprah {
+    color: var(--scnd-clr);
+}
+
+.info-text {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.info-text h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.info-text p {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.info-icon {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1.3rem;
+}
+
+.warn {
+    color: var(--scnd-clr);
+}
+
+.directions, .call-p {
+    color: var(--scnd-clr);
+    transition: 0.3s ease-in-out;
+}
+
+.directions:hover, .dir-p:hover {
+    color: black;
+}
+
+.dir-p {
+    transition: 0.3s ease-in-out;
+}
+
+.dir-p:hover {
+    color: black;
+}
+
+.start-bar {
+    display: flex;
+}
+
+.call {
+    display: flex;
+    margin: 0 20px;
+    align-items: center;
+}
+
+/* Map Styling */
+.map-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+/* Read More Button */
+.read-btn {
+    padding: 8px 12px;
+    background-color: transparent;
+    color: var(--scnd-clr);
+    font-size: 15px;
+    border: 1px solid var(--scnd-clr);
+    border-radius: 25px;
+    transition: 0.3s ease-in-out;
+}
+
+.read-btn:hover {
+    border-color: transparent;
+    background-color: var(--scnd-clr);
+    color: white;
+}
+
+/* Transitions */
+.info-fade-enter {
+    opacity: 0;
+}
+
+.info-fade-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in-out;
+}
+
+.info-fade-exit {
+    opacity: 1;
+}
+
+.info-fade-exit-active {
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+}
+
+/* Link Hover */
+.link-span {
+    text-decoration: underline;
+    transition: 0.3s ease-in-out;
+}
+
+link-span:hover {
+    text-decoration: none;
+}
+
+/* Custom Span */
+.cus-span {
+    color: var(--scnd-clr);
+    font-weight: 500;
+}
+
+/* Media Queries */
+
+
+
+
+@media (min-width: 768px) {
+    .title-banner {
+        padding: 60px 40px;
+    }
+
+    .button-group {
+        gap: 30px;
+    }
+
+    .location-info {
+        padding: 40px;
+    }
+
+    .map-container {
+        height: 400px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .content .paragraph {
+        margin-top: 40px;
+    }
+
+    .features {
+        gap: 40px;
+    }
+
+    .button-group {
+        gap: 50px;
+    }
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .loc2-container {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .tele h1, .home h1 {
+        font-size: 22px;
+    }
+
+    .tele .subtitle, .home .subtitle {
+        font-size: 16px;
+    }
+
+    .tele .sub-paragraph, .home .sub-paragraph {
+        font-size: 14px;
+    }
+
+    .section-icon {
+        margin-right: 10px;
+        font-size: 26px;
+    }
+
+    .contact-icons {
+        gap: 10px;
+    }
+}
+
+/* Adjustments for larger screens */
+@media (min-width: 1024px) {
+    .loc2-container {
+        padding: 40px;
+    }
+
+    .tele h1, .home h1 {
+        font-size: 36px;
+    }
+
+    .tele .subtitle, .home .subtitle {
+        font-size: 22px;
+    }
+
+    .tele .sub-paragraph, .home .sub-paragraph {
+        font-size: 18px;
+    }
+
+    .contact-icons {
+        gap: 30px;
+        font-size: 36px;
+    }
+}

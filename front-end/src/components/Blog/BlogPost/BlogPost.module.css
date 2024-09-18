@@ -1,0 +1,102 @@
+.blogPost {
+    padding: 2rem;
+}
+
+.blogHeader {
+    margin-bottom: 1.5rem;
+}
+
+.blogTitle {
+    font-size: 2rem;
+    color: #136c9d;
+    margin-bottom: 0.5rem;
+}
+
+.blogMeta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.blogParagraph {
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.blogParagraph p {
+    margin-bottom: 1rem;
+}
+
+.blogParagraph strong {
+    font-weight: 600;
+}
+
+.blogParagraph em {
+    font-style: italic;
+}
+
+.imageSlider {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.sliderWrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.sliderContainer {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.sliderImageWrapper {
+    flex: 0 0 100%;
+    width: 100%;
+}
+
+.sliderImage {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.sliderDots {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.sliderDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.activeDot {
+    background-color: #136c9d;
+}
+
+@media (max-width: 768px) {
+    .blogPost {
+        padding: 1.5rem;
+    }
+
+    .blogTitle {
+        font-size: 1.5rem;
+    }
+
+    .blogMeta {
+        flex-direction: column;
+    }
+}

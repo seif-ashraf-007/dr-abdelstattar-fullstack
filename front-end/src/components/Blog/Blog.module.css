@@ -1,0 +1,181 @@
+/* Existing styles for the banner - unchanged */
+.blogContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.titleBanner {
+    width: 100%;
+    padding: 40px 20px;
+    background: linear-gradient(
+        152.92deg, rgba(19, 108, 157, 0.8) 4.54%,
+        rgba(19, 108, 157, 0.9) 34.2%,
+        rgba(45, 54, 101, 0.75) 77.55%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titleBannerContent {
+    text-align: center;
+    max-width: 800px;
+}
+
+.titleBannerContent .titleBannerTitle {
+    color: white;
+    font-size: clamp(2rem, 5vw, 3.3rem);
+}
+
+.titleBannerContent .titleBannerParagraph {
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.801);
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+}
+
+.divider {
+    margin: 15px 10px;
+    border-color: var(--scnd-clr);
+    opacity: 20%;
+}
+
+/* Features */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    color: white;
+}
+
+.featIcon {
+    transition: 0.3s ease-in-out;
+}
+
+.featIcon:hover {
+    opacity: 70%;
+}
+
+/* New styles for the blog area */
+.blogContent {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px; /* Add some padding */
+    margin: 2rem auto;
+    box-sizing: border-box; /* Ensure padding doesn’t affect width */
+}
+
+.buttonGroupContainer {
+    width: 100%;
+    max-width: 100%; /* Ensure it doesn't stretch too wide */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin; /* Scrollbar visible */
+    -ms-overflow-style: auto;
+    margin-bottom: 30px;
+}
+
+
+.buttonGroup {
+    display: inline-flex; /* Ensure the buttons remain inline */
+    white-space: nowrap; /* Prevent wrapping */
+    padding: 0.5rem 0;
+    gap: 0.5rem;
+}
+
+/* Webkit browsers (Chrome, Safari, Edge) */
+.buttonGroupContainer::-webkit-scrollbar {
+    width: 8px; /* Adjust the width of the scrollbar */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition */
+}
+
+
+.buttonGroupContainer::-webkit-scrollbar-thumb {
+    background-color: var(--scnd-clr); /* Use your custom color */
+    border-radius: 10px; /* Rounded corners for the scrollbar */
+}
+
+.buttonGroupContainer::-webkit-scrollbar-track {
+    background-color: transparent; /* You can change this to any color if needed */
+}
+
+.buttonGroup::-webkit-scrollbar {
+    display: none;
+}
+
+.blogButton {
+    padding: 0.75rem 1.5rem;
+    background-color: transparent;
+    color: var(--scnd-clr);
+    border: 1px solid var(--scnd-clr);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    font-weight: 500;
+    flex: 0 0 auto;
+    white-space: nowrap;
+}
+
+.blogButton:hover {
+    background-color: var(--scnd-clr);
+    color: white;
+}
+
+.blogButtonActive {
+    background-color: #136c9d;
+    color: white;
+}
+
+.blogInfo {
+    width: 100%;
+    background-color: #f3f4f6;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Transition styles */
+.infoFadeEnter {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.infoFadeEnterActive {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms ease-out, transform 300ms ease-out;
+}
+
+.infoFadeExit {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.infoFadeExitActive {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 300ms ease-out, transform 300ms ease-out;
+}
+
+
+@media (max-width: 1200px) {
+    .blogContent {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .blogButton {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .titleBanner {
+        width: 100vw;
+    }
+}
