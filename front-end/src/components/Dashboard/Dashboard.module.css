@@ -1,0 +1,74 @@
+.dashboardContainer {
+    padding: 2rem;
+    background-color: #f4f4f4;
+  }
+
+  .dashboardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .dashboardTitle {
+    color: #2e3665;
+  }
+
+  .createPostButton {
+    background-color: #146a9e;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .createPostButton:hover {
+    background-color: #2e3665;
+  }
+
+  .postsList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .postItem {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .postActions {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+
+  .editButton,
+  .deleteButton {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .editButton {
+    background-color: #146a9e;
+    color: white;
+  }
+
+  .deleteButton {
+    background-color: #e74c3c;
+    color: white;
+  }
+
+  .editButton:hover {
+    background-color: #2e3665;
+  }
+
+  .deleteButton:hover {
+    background-color: #c0392b;
+  }
