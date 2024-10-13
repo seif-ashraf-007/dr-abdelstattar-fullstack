@@ -34,10 +34,6 @@ const Login = () => {
       localStorage.setItem('token', data.token);
       localStorage.setItem('isLoggedIn', 'true'); // Make sure to store as string
 
-
-      // Navigate to the dashboard upon successful login
-      navigate('/dashboard');
-
     } catch (error) {
       console.error('Error during login:', error);
       setError('Login failed: ' + error.message);

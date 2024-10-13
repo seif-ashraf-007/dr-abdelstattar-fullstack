@@ -6,7 +6,6 @@ import Footer from './components/UI/Footer/Footer';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Login from './pages/Login/Login';
-import Dashboard from './pages/Dashboard/Dashboard';
 
 const App = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -21,6 +20,7 @@ const App = () => {
     const handleLogin = () => {
         setIsLoggedIn(true);
         localStorage.setItem('isLoggedIn', 'true');
+        window.location.href = '/login';
     };
 
     const handleLogout = () => {
@@ -36,16 +36,9 @@ const App = () => {
                 <Route path="/locations" element={<Locations />} />
                 <Route path="/blog" element={<Blog />} />
 
-                {/* Redirect from /login to /dashboard if already logged in */}
                 <Route
                     path="/login"
-                    element={!isLoggedIn ? <Login onLogin={handleLogin} /> : <Navigate to="/dashboard" />}
-                />
-
-                {/* Redirect to /login if not logged in when accessing /dashboard */}
-                <Route
-                    path="/dashboard"
-                    element={isLoggedIn ? <Dashboard /> : <Navigate to="/login" />}
+                    element={!isLoggedIn ? <Login onLogin={handleLogin} /> : <Navigate to="/" />}
                 />
             </Routes>
             <Footer />
