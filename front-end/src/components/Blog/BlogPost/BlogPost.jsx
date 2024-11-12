@@ -6,7 +6,7 @@ const BlogPost = ({
   title,
   paragraph,
   pictures = [], // Default value
-  author = 'Dr. Abdelsattar Ahmed Nasr', // Default value
+  author = 'Anonymous', // Default value
   timestamp
 }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

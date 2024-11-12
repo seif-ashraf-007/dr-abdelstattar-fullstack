@@ -35,11 +35,7 @@ const App = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/locations" element={<Locations />} />
                 <Route path="/blog" element={<Blog />} />
-
-                <Route
-                    path="/login"
-                    element={!isLoggedIn ? <Login onLogin={handleLogin} /> : <Navigate to="/" />}
-                />
+                <Route path="/login" element={<Login />} />
             </Routes>
             <Footer />
         </Router>

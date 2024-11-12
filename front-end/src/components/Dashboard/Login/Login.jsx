@@ -31,8 +31,8 @@ const Login = () => {
       console.log('Login successful, token:', data.token);
 
       // Save the token and login status to local storage
-      localStorage.setItem('token', data.token);
-      localStorage.setItem('isLoggedIn', 'true'); // Make sure to store as string
+      localStorage.setItem('token', data.token); // Set JWT token in local storage
+      localStorage.setItem('isLoggedIn', 'true'); // Also set logged in status
 
     } catch (error) {
       console.error('Error during login:', error);
